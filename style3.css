@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    margin: 30px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;   
+    font-size: 20px;  
+    font-weight: 400;       
+    box-shadow: 0 0 17px #eee;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .btn-grad-left {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    margin: 30px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;   
+    font-size: 20px;  
+    font-weight: 400;       
+    box-shadow: 0 0 17px #eee;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    right: 0;
+  }
+
+.project{
+    background-image: url(./images/project-bg.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    
+}
+
+input{
+    display: none;
+}
+
+.container{
+    width: 50vw;
+    height: 50vh;
+    max-width: 600px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.cards{
+    position: absolute;
+    height: 150px;
+    width: 200px;
+   margin-top: -50px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    
+  
+}
+
+.cards label{
+    position: absolute;
+    width: 450px;
+    height: 650px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.cards .card{
+    position: relative;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+    padding: 30px 35px;
+}
+
+.cards .image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .image img{
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0,0,0,50%);
+    margin-top: 23px;
+    width: 86%;
+    height: 220px;
+    object-fit: cover;
+    transition: all .7s;
+}
+
+.cards .image img:hover{
+    transform: scale(1.05);
+}
+
+.cards .image .dots{
+    text-align: center;
+}
+
+#slide1{
+    scale: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#slide2{
+    scale: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+#slide3{
+    scale: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#slide4{
+    scale: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#slide5{
+    scale: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+
+
+
+.dots div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dots div:nth-child(1){
+    background-color: var(--current-color1);
+}
+
+.dots div:nth-child(2){
+    background-color: #5b85f9;
+}
+.dots div:nth-child(3){
+    background-color: #000;
+}
+
+.cards .infos{
+    display: block;
+    text-align: end;
+    padding: 60px;
+}
+
+.cards .infos span{
+    display: block;
+}
+
+.infos .name{
+    font-size: 32px;
+    color: var(--current-color1);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    padding-left: 25%;
+    transition: all 0.6s ease;
+}
+
+.card .para{
+    font-size: 15px;
+    color: #eceaed;
+    letter-spacing: 1px;
+}
+
+.card .btn-details{
+    width: 100%;
+    height: 50px;
+    margin: 35px auto;
+    border-radius: 5px;
+    background-color: var(--current-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all .7s ease;
+    text-decoration: none;
+}
+
+.card .btn-details:hover{
+    transform: scale(1.09);
+}
+
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3{
+
+box-shadow:0 15px 30px rgba(0,0,0,45%) ;
+transform: translate3d(-70%, 0, -220px);
+--current-color1: #eceaed;
+--current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4{
+
+box-shadow:0 20px 40px rgba(0,0,0,45%) ;
+transform: translate3d(-35%, 0, -120px);
+--current-color1: #eceaed;
+--current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5{
+
+box-shadow:0 25px 50px rgba(0,0,0,50%) ;
+transform: translate3d(0,0,0);
+--current-color1: #fad00c;
+--current-color2: #eceaed;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1{
+
+box-shadow:0 20px 40px rgba(0,0,0,45%) ;
+transform: translate3d(35%, 0, -120px);
+--current-color1: #eceaed;
+--current-color2: #404457;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2{
+
+box-shadow:0 15px 30px rgba(0,0,0,45%) ;
+transform: translate3d(70%, 0, -220px);
+--current-color1: #eceaed;
+--current-color2: #404457;
+}
+
+
+@keyframes slideRight {
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0%{
+      scale: 0;
+    }
+    100%{
+      scale: 1;
+    }
+  }
+
+  @keyframes slideLeft {
+    0%{
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 738px) and (max-width: 1280px){
+    
+    .cards label{
+        width: 380px;
+        height: 570px; 
+        left: auto;
+        right: -70px;
+        top: 45px;
+    }
+    
+    .cards .card{
+        padding: 30px 35px;
+    }
+    
+    .cards .image img{
+        margin-top: 18px;
+        width: 93%;
+        height: 190px;
+    }
+   
+    .dots div{
+        width: 9px;
+        height: 9px;
+    }
+    .cards .infos{
+        padding: 30px;
+    }
+   
+    
+    .infos .name{
+        font-size: 28px;
+    }
+    
+    .card .para{
+        font-size: 13px;
+    }
+    
+    .card .btn-details{
+        height: 45px;
+        margin: 35px auto;
+        font-size: 20px;
+    }
+  }

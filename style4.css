@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+   color: #fff;
+   background-image: url(./images/skills3.avif);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 120vh;
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    margin: 30px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;   
+    font-size: 20px;  
+    font-weight: 400;       
+    box-shadow: 0 0 17px #eee;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .btn-grad-left {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    margin: 30px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;   
+    font-size: 20px;  
+    font-weight: 400;       
+    box-shadow: 0 0 17px #eee;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    right: 0;
+  }
+
+
+.sub-title{
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+    font-weight: 500;
+    color: white;
+    opacity: 90%;
+}
+
+section{
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.container1{
+    width: 530px;
+    height: 500px;
+    padding: 25px 30px;
+    margin-left: 120px;
+    margin-top: -10px;
+    
+}
+
+
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    text-decoration: none !important;
+}
+
+.bar{
+    font-size: 23px;
+}
+
+.Technical-bars .bar{
+   margin: 40px 0;
+}
+
+.Technical-bars .bars:first-child{
+    margin-top: 0;
+}
+
+.Technical-bars .bars:last-child{
+    margin-bottom: 0;
+}
+
+.Technical-bars .bars .info{
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bars .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius:10px ;
+    width: 100%;
+    height: 5px;
+    background-color: #323444;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span{
+    width: 80%;
+}
+
+.progress-line.css span{
+    width: 75%;
+}
+
+.progress-line.js span{
+    width: 40%;
+}
+
+.progress-line.tailwind span{
+    width: 70%;
+}
+
+.progress-line.cpp span{
+    width: 80%;
+}
+
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: #323444;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;;
+    }
+}
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path1{
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path2{
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path3{
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path4{
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+@keyframes slideRight {
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0%{
+      scale: 0;
+    }
+    100%{
+      scale: 1;
+    }
+  }
+
+  @keyframes slideLeft {
+    0%{
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  @media (min-width: 738px) and (max-width: 1280px){
+    body{
+        height: 120vh;
+     }
+     
+     .btn-grad {
+         padding: 10px 35px;   
+         font-size: 18px;  
+      }
+     
+       .btn-grad-left {
+         padding: 10px 35px;  
+         font-size: 18px;  
+       }
+     
+     
+     .sub-title{
+         font-size: 45px;
+         padding-top: 23px;
+     }
+    
+     .container1{
+         width: 460px;
+         height: 400px;
+         padding: 25px 30px;
+         margin-left: 90px;
+         margin-top: -10px;
+     }
+    
+     .bar{
+         font-size: 17px;
+     }
+ }
